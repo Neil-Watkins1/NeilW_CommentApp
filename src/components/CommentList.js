@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Comment from './Comment';
-class CommentList extends Component{
 
-render(){
+const CommentList = ({data}) => {
 
-  const commentNodes = this.props.data.map(comment => {
+
+
+  const commentNodes = data.map(comment => {
     return(
       <Comment key={comment.id} author={comment.author}>{comment.text}</Comment>
     )
@@ -16,6 +17,6 @@ render(){
 );
 }
 
-}
+
 
 export default CommentList;
